@@ -74,9 +74,9 @@ LAZY_YT_HANDLE = environ.get('LAZY_YT_HANDLE','TechnicalHPgamer')  # WITHOUT @ [
 MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME', "CinemasMawaDiscussion") #[ without @ ]
 
 # Url Shortner
-URL_MODE = is_enabled((environ.get("URL_MODE","False")), False)
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', '') #Always use website url from api section 
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '')
+URL_MODE = is_enabled((environ.get("URL_MODE","True")), False)
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'greymatterslinks.in') #Always use website url from api section 
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'eb7a80e01550a3283a0e11b3cc83101514129686')
 LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5965340120').split()]
 lazy_groups = environ.get('LAZY_GROUPS','')
 LAZY_GROUPS = [int(lazy_groups) for lazy_groups in lazy_groups.split()] if lazy_groups else None # ADD GROUP ID IN THIS VARIABLE
