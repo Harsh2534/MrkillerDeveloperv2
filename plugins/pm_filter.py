@@ -1214,7 +1214,7 @@ async def auto_filter(client, msg, spoll=False):
                     btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'{pre}#{file.file_id}'),] for file in files ]
 			
                 else:
-                    btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}")),] for file in files ]
+                    btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", url=await get_shortlink(f"https://telegram.dog/{BOT_USERNAME}?start=files_{file.file_id}")),] for file in files ]
             else    :
                 btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'{pre}#{file.file_id}'), ] for file in files]
 
@@ -1226,7 +1226,7 @@ async def auto_filter(client, msg, spoll=False):
             elif message.from_user.id in LZURL_PRIME_USERS:
                 btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'{pre}#{file.file_id}'),] for file in files ]
             else:
-                btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", url=await get_shortlink(f"https://telegram.dog/{temp.U_NAME}?start=files_{file.file_id}")),] for file in files ]
+                btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", url=await get_shortlink(f"https://telegram.dog/{BOT_USERNAME}?start=files_{file.file_id}")),] for file in files ]
         else:
             if message.from_user.id in ADMINS:
                 btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'files#{file.file_id}'),] for file in files ]
